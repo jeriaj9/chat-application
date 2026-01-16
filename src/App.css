@@ -144,6 +144,8 @@ body {
   background: #263238;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  /* Added to separate title and button */
   padding: 0 2rem;
   flex-shrink: 0;
 }
@@ -154,6 +156,25 @@ body {
   font-size: 1.2rem;
   margin: 0;
   letter-spacing: 0.5px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 0, 0, 0.2);
+  transform: scale(1.1);
+  color: #ff5252;
 }
 
 .chat-window .chat-body {

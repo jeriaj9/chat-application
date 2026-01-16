@@ -18,6 +18,12 @@ function App() {
     }
   };
 
+  const closeChat = () => {
+    setShowChat(false);
+    setUsername("");
+    setRoom("");
+  };
+
   return (
     <div className="App">
       {!showChat ? (
@@ -29,7 +35,7 @@ function App() {
           joinRoom={joinRoom}
         />
       ) : (
-        <ChatWindow socket={socket} username={username} room={room} />
+        <ChatWindow socket={socket} username={username} room={room} closeChat={closeChat} />
       )}
     </div>
   );
